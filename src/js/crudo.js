@@ -63,7 +63,7 @@ class Crudo{
 	}
 	/**
 	Atención al botón Aceptar de VistaCrear. Crea el nuevo objeto
-	@param objeto {Clase} Objeto a crear.
+	@param objeto {OperatingSystem} Objeto a crear.
 	*/
 	aceptarCrear(objeto){
 		this.modelo.insertar(objeto, this.listar.bind(this))

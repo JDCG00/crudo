@@ -12,7 +12,7 @@
 export class Modelo{
 	//Atributos
 	#bd	//Conexión con la base de datos
-	#OS1 = 'Objeto'	//ObjectStore (como la "tabla")
+	#OS1 = 'sistema_operativo'	//ObjectStore (como la "tabla")
 
 	/**
 		Constructor de Modelo
@@ -79,11 +79,11 @@ export class Modelo{
 		return transaccion.objectStore(this.#OS1)	//OS para la transacción
 	}
 	/**	Inserta un objeto en la base de datos
-		@param {Clase} objeto - objeto a insertar.
+		@param {OperatingSystem} sistema_operativo - objeto a insertar.
 		@param {Function} callback - Función de callback que se llamará al completar la operación.
 	**/
-	insertar(objeto, callback){
-		let peticion = this.getTransaccionOS('readwrite').add(objeto)
+	insertar(sistema_operativo, callback){
+		let peticion = this.getTransaccionOS('readwrite').add(sistema_operativo)
 		peticion.onsuccess = callback
 	}
 }

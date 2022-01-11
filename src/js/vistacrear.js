@@ -9,7 +9,7 @@
 */
 
 import {Vista} from './vista.js'
-import {Clase} from './clase.js'
+import {OperatingSystem} from './OperatingSystem.js'
 
 export class VistaCrear extends Vista{
 	/**
@@ -55,8 +55,8 @@ export class VistaCrear extends Vista{
 		//Aquí se haría la validación de datos.
 		let nombre = this.html.iNombre.value
 		//Construimos el objeto de negocio
-		let objeto = new Clase(nombre)
-		this.controlador.aceptarCrear(objeto)
+		let sistema_operativo = new OperatingSystem(nombre)
+		this.controlador.aceptarCrear(sistema_operativo)
 		this.limpiar()
 	}
 	/**

@@ -1,5 +1,5 @@
 /**
-	clase.js Clase de negocio que representa un objeto.
+	OperatingSystem.js Clase de negocio que representa un Sistema Operativo.
 	@author Miguel Jaque <mjaque@migueljaque.com>
 	@license GPL-3.0-or-later
 */
@@ -7,7 +7,7 @@
 /**
 	Clase de negocio que representa un objeto.
 */
-export class Clase{
+export class OperatingSystem{
 	//Atributos estáticos
 	static ESTADO = {
 		Estado1: Symbol(),
@@ -27,7 +27,7 @@ export class Clase{
 
 	/**
 		Constructor de la clase.
-		@param nombre {String} Nombre del objeto.
+		@param nombre {OperatingSystem} Nombre del objeto.
 	**/
 	constructor(nombre){
 		this.nombre = nombre
