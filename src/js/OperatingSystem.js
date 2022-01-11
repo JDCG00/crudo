@@ -17,7 +17,7 @@ export class OperatingSystem{
 	
 	//Atributos Dinámicos
 	//Encapsulamos los atributos como privados.
-	#id	//Identificador único del objeto
+	#id	//Identificador único del sistema operativo
 	#nombre
 	#descripcion
 	#fecha
@@ -27,7 +27,7 @@ export class OperatingSystem{
 
 	/**
 		Constructor de la clase.
-		@param nombre {OperatingSystem} Nombre del objeto.
+		@param nombre {String} Nombre del sistema operativo.
 	**/
 	constructor(nombre){
 		this.nombre = nombre
