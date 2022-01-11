@@ -9,7 +9,7 @@
 */
 
 import {Vista} from './vista.js'
-import {OperatingSystem} from './OperatingSystem.js'
+import {OperatingSystem} from './operatingsystem.js'
 
 export class VistaCrear extends Vista{
 	/**
