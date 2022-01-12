@@ -12,6 +12,7 @@
 import {Vista} from './vista.js'
 import {Menu} from './menu.js'
 import {VistaCrear} from './vistacrear.js'
+import {VistaListar} from './vistalistar.js'
 
 export class VistaPrincipal extends Vista{
 	/**
@@ -56,7 +57,8 @@ export class VistaPrincipal extends Vista{
 		//Subvistas. No se cargan hasta tener registradas las referencias a la plantilla.
 		this.hijos = {
 			'menu' : new Menu(this.controlador, this.html.nav),
-			'vistaCrear': new VistaCrear(this.controlador, this.html.main)
+			'vistaCrear': new VistaCrear(this.controlador, this.html.main),
+			'vistaListar': new VistaListar(this.controlador, this.html.main)
 		}
 	}
 	/**
@@ -64,13 +66,21 @@ export class VistaPrincipal extends Vista{
 	*/
 	verCrear(){
 		this.ocultarSubvistasMain()
-		this.hijos.crear.mostrar()
+		this.hijos.vistaCrear.mostrar()
 	}
 	/**
 	Oculta las subvistas de main
 	*/
 	ocultarSubvistasMain(){
 		//Añadir el resto de subvistas de main
-		this.hijos.vistaCrear.ocultar()
+		this.hijos.vistaCrear.mostrar(false)
+		this.hijos.vistaListar.mostrar(false)
+	}
+	/**
+	Muestra la vista listar 
+	*/
+	verListar(){
+		this.ocultarSubvistasMain()
+		this.hijos.vistaListar.mostrar(true)
 	}
 }

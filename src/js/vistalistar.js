@@ -1,17 +1,17 @@
 /**
-	vistacrear.js Vista de Formulario para la creación de objetivos.
+	vistalistar.js Vista de Formulario para la lista de sistemas operativos.
 	@author Miguel Jaque <mjaque@migueljaque.com>
 	@license GPL-3.0-or-later
 */
 
 /**
-	Vista de Formulario para la creación de objetivos.
+	Vista de Formulario para la lista de sistemas operativos.
 */
 
 import {Vista} from './vista.js'
 import {OperatingSystem} from './operatingsystem.js'
 
-export class VistaCrear extends Vista{
+export class VistaListar extends Vista{
 	/**
 		Constructor de la vista.
 		Declara a inicializa los atributos del objeto.
@@ -24,8 +24,7 @@ export class VistaCrear extends Vista{
 		//Referencias a Elementos HTML en la plantilla
 		this.html = {
 			'div':null,
-			'iNombre' : null,
-			'btnAceptar' : null
+			'tabla' : null
 		}
 
 		//Subvistas. No se cargan hasta tener registradas las referencias a la plantilla.
@@ -41,25 +40,12 @@ export class VistaCrear extends Vista{
 	registrar(docPlantilla){
 		//Guardamos las referencias a los elementos del interfaz
 		this.html.div = docPlantilla.getElementsByTagName('div')[0]
-		this.html.iNombre = docPlantilla.getElementsByTagName('input')[0]
-		this.html.btnAceptar = docPlantilla.getElementsByTagName('button')[0]
+		this.html.tabla = docPlantilla.getElementsByTagName('table')[0]
 	}
 	/**
 	Asocia los manejadores de eventos a los eventos del documento.
 	**/
 	asociar(){
-		this.html.btnAceptar.onclick = this.aceptar.bind(this)
-	}
-	/**
-	Atención al botón Aceptar
-	*/
-	aceptar(){
-		//Aquí se haría la validación de datos.
-		let nombre = this.html.iNombre.value
-		//Construimos el objeto de negocio
-		let sistema_operativo = new OperatingSystem(nombre)
-		this.controlador.aceptarCrear(sistema_operativo)
-		this.limpiar()
 	}
 	/**
 		Borra los campos del formulario.

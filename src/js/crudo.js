@@ -46,6 +46,7 @@ class Crudo{
 	*/
 	iniciar(){
 		console.log('crudo.iniciar')
+		this.vistaPrincipal.verCrear()
 	}
 
 	//Atención a Eventos
@@ -54,12 +55,13 @@ class Crudo{
 	*/
 	listar(){
 		console.log('crudo.listar')
+		this.vistaPrincipal.verListar()
 	}
 	/**
 		Atención a la opción de menú "verCrear"
 	*/
 	verCrear(){
-		this.vistaPrincipal.verCrear()	
+		this.vistaPrincipal.verCrear()
 	}
 	/**
 	Atención al botón Aceptar de VistaCrear. Crea el nuevo objeto

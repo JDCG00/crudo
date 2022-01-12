@@ -102,4 +102,17 @@ export class Vista {
   crearHijos() {
 		//Este método debe ser sobreescrito por la clase derivada.
 	}
+  /**
+  Muestra o oculta la vista
+  @param 
+  */
+  mostrar(mostrar){
+    if (mostrar) {
+      this.html.div.style.display = 'block'
+    }else{
+      this.html.div.style.display = 'none'
+    }
+  }
+
+
 }
