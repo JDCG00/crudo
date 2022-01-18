@@ -104,15 +104,16 @@ export class Vista {
 	}
   /**
   Muestra o oculta la vista
-  @param 
+  @deprecated
+  @param mostrar {Boolean} true para mostrar la vista, pulse para ocultarla
   */
-  mostrar(mostrar){
+  /*mostrar(mostrar){
     if (mostrar) {
       this.html.div.style.display = 'block'
     }else{
       this.html.div.style.display = 'none'
     }
-  }
+  }*/
 
 
 }

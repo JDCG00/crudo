@@ -53,4 +53,17 @@ export class VistaListar extends Vista{
 	limpiar(){
 		this.html.iNombre = ''
 	}
+	/**
+	Muestra o oculta la vista
+	@deprecated
+	@param mostrar {Boolean} true para mostrar la vista, pulse para ocultarla
+	*/
+
+	mostrar(mostrar){
+		if (mostrar) {
+			$(this.html.div).show()
+		}else{
+			$(this.html.div).hide()
+		}
+	}
 }
