@@ -49,8 +49,8 @@ export class Vista {
 							const promesas = [] //Creamos un array de promesas
               for (let hijo in this.hijos)
                 promesas.push(this.hijos[hijo].cargar())
-              Promise.all(promesas).then(resolve(true))
-            })
+              Promise.all(promesas)
+          })
         })
         .catch(error => {
           throw error
@@ -104,7 +104,7 @@ export class Vista {
 	}
   /**
   Muestra o oculta la vista
-  @param 
+  @param mostrar {Boolean} true para mostrar la vista, false para ocultarla
   */
   mostrar(mostrar){
     if (mostrar) {
